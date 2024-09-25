@@ -45,10 +45,13 @@ function decode(expr) {
         
         if (part === "**********") {
             result += ' ';
-        } else {
+        }
+        
+        else {
             let symbol = '';
+            let part2 = '';
             for (let k = 0; k < part.length; k += 2) {
-                let part2 = part.slice(k, k + 2);
+                part2 = part.slice(k, k + 2);
                 
                 if (part2 === '10') {
                     symbol += '.';
