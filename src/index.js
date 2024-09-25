@@ -43,7 +43,7 @@ function decode(expr) {
     for(let i = 0; i < expr.length; i+=10){
         let part = expr.slice(i, i+10);
         
-        if(part=="**********"){
+        if(part === "**********"){
             result += ' ';
         }
 
@@ -54,11 +54,11 @@ function decode(expr) {
             for(let k = 0; k < expr.length; i+=2){
                 part2 = part.slice(k, k+2)
                 
-                if(part2 == '10'){
+                if(part2 === '10'){
                     symbol+= '.';
                 }
 
-                else if(part2 == '11'){
+                else if(part2 === '11'){
                     symbol += '-'
                 }
             }
